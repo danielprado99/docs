@@ -1,41 +1,36 @@
 site_name: Plataformas, Microsserviços e APIs
-site_author: Daniel da Rocha Prado # CORRIGIDO
+site_author: Daniel da Rocha Prado
 site_url: https://danielprado99.github.io/documentation
 repo_url: https://github.com/danielprado99/docs
 repo_name: danielprado99/docs
 
-
 theme:
   name: material
-  language: pt # ADICIONADO: Para traduzir elementos do tema para português
   palette:
-    # Paleta para modo claro (padrão)
+    # Light mode
     - scheme: default
       primary: grey
-      accent: blue # Adicionei um accent para links e elementos ativos
       toggle:
         icon: material/toggle-switch-off-outline
-        name: Mudar para modo escuro
+        name: Switch to dark mode
 
-    # Paleta para modo escuro
+    # Dark mode
     - scheme: slate
-      primary: grey # Pode ser 'blue' ou outra cor se preferir no modo escuro
-      accent: light-blue # Adicionei um accent para links e elementos ativos no modo escuro
+      primary: grey
       toggle:
         icon: material/toggle-switch
-        name: Mudar para modo claro
+        name: Switch to light mode
 
   features:
     - content.code.copy
     - content.code.select
     - content.code.annotate
     - content.tooltips
-    - navigation.instant # Carregamento mais rápido entre páginas
-    # - navigation.instant.progress # Removido pois às vezes pode ser um pouco demais
-    - navigation.top # Botão "Voltar ao topo"
-    - navigation.path # Mostra o caminho da página (breadcrumb)
-    - navigation.tracking # Mantém a navegação sincronizada com a rolagem
-    - navigation.expand # Expande seções da navegação automaticamente
+    - navigation.instant
+    - navigation.top
+    - navigation.path
+    - navigation.tracking
+    - navigation.expand
 
 markdown_extensions:
   - admonition
@@ -46,51 +41,42 @@ markdown_extensions:
       line_spans: __span
       pygments_lang_class: true
   - pymdownx.emoji:
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_index: !!python/name:material.extensions.emoji.twemoji 
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.inlinehilite
   - pymdownx.snippets:
       url_download: true
-  - pymdownx.superfences
+  - pymdownx.superfences:
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.tasklist:
-      custom_checkbox: true
+      custom_checkbox: true  
   - footnotes
   - pymdownx.keys
   - pymdownx.mark
   - tables
-  - toc: # Adicionado para controle do sumário (Table of Contents)
-      permalink: true
-      toc_depth: 3 # Profundidade do sumário nas páginas
-
+      
 plugins:
   - search:
-      lang: pt # Configura a busca para português
+      lang: pt
   - glightbox
   - git-revision-date-localized:
       enable_creation_date: true
-      type: datetime # 'date' ou 'datetime' ou 'iso_datetime'
-      locale: pt_BR # Usar pt_BR para formato de data brasileiro
-      # fallback_date_format: "%Y-%m-%d" # Formato se o locale falhar
+      type: datetime
+      locale: pt
   - minify:
       minify_html: true
   - termynal:
       prompt_literal_start:
         - "$"
         - ">"
-  # Considere adicionar se for usar diagramas:
-  # - mermaid
-
-# Se você tiver um logo (opcional)
-# logo: assets/images/seu-logo.png
 
 nav:
   - Home: index.md
-  - Individual:
-    - 'Exchange API': exchange/main.md 
-    - 'Product API': product/main.md
-    - 'Order API': order/main.md
-    - 'Jenkins': jenkins/main.md
-    - 'MiniKube': minikube/main.md
-    - 'Bottlenecks': bottlenecks/main.md
+  - Individual: 
+    - Bottlenecks: ./bottlenecks/main.md
+    - Exchange API: ./exchange/main.md
+    - Jenkins: ./jenkins/main.md
+    - MiniKube: ./minikube/main.md
+    - Order API: ./order/main.md
+    - Product API: ./product/main.md
