@@ -3,7 +3,7 @@ site_author: Daniel da Rocha Prado # CORRIGIDO
 site_url: https://danielprado99.github.io/documentation
 repo_url: https://github.com/danielprado99/docs
 repo_name: danielprado99/docs
-docs_dir: 'docs'
+
 
 theme:
   name: material
